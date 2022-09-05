@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+
+{{top|safe}}
+<form action="/solver/solution" for = "minisquare" method="post">
+    <table id="table">
+        {% for answersquare in range(9) %}
+            <tr class = "row">
+                {% for ans in range(9) %}
+                        <td class = "square"><input class="squareinp" type="text" name="minisquare[]" maxlength="1" pattern="[0-9]" placeholder="0" size="2vw"></td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+  
+    <input id = "submit" type="submit">
+</form>
+
+
+{% endblock %}
+

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+    <link rel="stylesheet" href="{{url_for('static',filename = 'sudoku.css') }}">
+    <script src="{{url_for('static', filename = 'sudoku.js')}}" defer></script>
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <div class="nav">
+        
+        <a class = "link l1" href="{{ url_for('solver') }}">Solver</a>
+        <a class = "link l2" href="{{ url_for('create') }}">Creater</a>
+        
+    </div>
+
+    {% block body %}{% endblock %}
+</body>
+</html>

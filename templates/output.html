@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+{{top|safe}}
+
+<table id="table">
+    {% for answersquare in square %}
+        <tr class = "row">
+            {% for ans in answersquare %}
+                {% if ans[1] == "yes" %}
+                    <td class = "square bgg">{{ans[0]}}</td>
+                {% elif ans[1] == "no" %}
+                    <td class = "square bgr">{{ans[0]}}</td>
+                {% else %}
+                    <td class = "square">{{ans[0]}}</td>
+                {% endif %}
+            {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
+
+
+
+
+
+
+{% endblock %}
+
